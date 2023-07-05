@@ -1,0 +1,101 @@
+.contact {
+    margin-bottom: 120px;
+
+    &__inner {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &__content {
+        padding-right: 20px;
+        flex-shrink: 0;
+    }
+
+    &__address {
+        margin-bottom: 14px;
+
+        font-family: 'Futura PT book';
+        font-size: $font-size-text;
+        line-height: 39px;
+    }
+
+    &__phone {
+        display: block;
+        padding: .5em 0;
+        margin-bottom: 70px;
+        font-family: 'Futura PT book';
+        font-size: $font-size-link;
+        color: #000;
+        text-decoration: none;
+        outline: none;
+    }
+
+    &__phone:focus {
+        animation: focusOrderLink .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    &__map {
+        flex-basis: 700px;
+        flex-shrink: 1;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .contact {
+        margin-bottom: 0;
+
+        &>.container {
+            padding: 0;
+        }
+
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__content {
+            padding-left: 40px;
+            padding-right: 0;
+        }
+
+        &__address {
+            margin-bottom: 0;
+        }
+
+        &__phone {
+            margin-bottom: 20px;
+        }
+
+        &__map {
+            flex-basis: auto;
+            height: 500px;
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .contact {
+        &__phone {
+            font-size: 24px;
+        }
+
+        &__map {
+            height: 390px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .contact {
+        &__phone {
+            padding: 0;
+        }
+
+        &__map {
+            height: 300px;
+        }
+    }
+}

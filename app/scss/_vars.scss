@@ -1,0 +1,26 @@
+//colors
+$color-text-main: #000;
+$color-text-second: #FFF;
+$color-h1: #FEE0B7;
+$color-section-title: #000;
+$color-link-default: #FFF;
+$color-link-active: rgba(#FFF, 0.7);
+
+// fonts
+$font-size-text: 16px;
+$font-size-section-title: 48px;
+$font-size-link: 40px;
+
+// background color
+$background-color-section: #FFF;
+
+// gradient
+$linear-gradient-box-ouline: linear-gradient(to bottom right,
+        #A75F15, #E3B373 14%,
+        #FEE0B7 28%, #FEE0B7 42%,
+        #DEA760 56%, #C3843E 80%,
+        #AF6B1F);
+
+// transition
+$transition-link: .3s;
+$transition-burger-menu: .5s;
