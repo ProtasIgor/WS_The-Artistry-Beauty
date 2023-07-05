@@ -1,0 +1,104 @@
+.rule {
+    margin-bottom: 120px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__content {
+        flex-basis: 700px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list-item {
+        display: block;
+        border-top: 1px solid #FEE0B7;
+        border-bottom: 1px solid #FEE0B7;
+    }
+
+    &__list-item:first-child {
+        border-top: none;
+    }
+
+    &__list-item:last-child {
+        border-bottom: none;
+    }
+
+    &__list-item-title {
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        font-family: 'Futura PT book';
+        font-size: $font-size-text;
+        line-height: $font-size-text;
+        color: $color-text-main;
+        cursor: pointer;
+        outline: none;
+        transition: all .3s;
+    }
+
+    &__list-item-title:focus {
+        animation: focusOrderLink .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    &__list-item-title.rule__list-item-title--open::after {
+        transform: rotateX(180deg);
+        transition: transform .3s;
+    }
+
+    .rule__list-item-title--open {
+        font-weight: bold;
+    }
+
+    &__list-item-title::after {
+        width: 15px;
+        height: 15px;
+        content: url(../images/summary-pointer.svg);
+        transition: transform .3s;
+    }
+
+    &__list-item-title::marker {
+        content: '';
+    }
+
+    &__list-item-text {
+        padding: 0 1em 1em;
+        font-family: 'Futura PT book';
+        font-size: $font-size-text;
+        color: $color-text-main;
+    }
+}
+
+@media (max-width: 1000px) {
+    .rule {
+        &__inner {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__content {
+            flex-basis: content;
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+
+    .rule .section__title {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .rule {
+        margin-bottom: 50px;
+    }
+}

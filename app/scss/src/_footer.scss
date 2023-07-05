@@ -1,0 +1,17 @@
+.footer {
+    padding: 40px 0;
+    background-color: #A8AF9C;
+
+    &__description {
+        display: block;
+        font-family: 'Futura PT book';
+        color: $color-text-second;
+        font-size: $font-size-text;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__description {
+        text-align: center;
+    }
+}

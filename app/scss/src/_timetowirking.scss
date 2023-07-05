@@ -1,0 +1,107 @@
+.timetowork {
+    margin-bottom: 190px;
+    background-color: #A8AF9C;
+
+    &__box {
+        padding: 45px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content,
+    &__special {
+        width: 100%;
+        max-width: 350px;
+        font-family: 'Futura PT book';
+        color: $color-text-second;
+    }
+
+    &__special {
+        position: relative;
+        text-align: right;
+    }
+
+    &__special::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -97px;
+        width: 130%;
+        height: 150%;
+
+        border: 2px solid;
+        border-image: $linear-gradient-box-ouline;
+        border-image-slice: 1;
+        border-right: none;
+    }
+
+    &__title {
+        font-weight: normal;
+        margin-bottom: 33px;
+        font-size: 24px;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        line-height: 60px;
+        font-size: 57px;
+    }
+
+    &__description {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .timetowork {
+        &__special::after {
+            border: transparent;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .timetowork {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 750px) {
+    .timetowork {
+        &__content {
+            display: none;
+        }
+
+        &__special {
+            text-align: left;
+        }
+
+        &__special::after {
+            left: -10px;
+            border-right: 2px solid;
+            border-left: none;
+
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .timetowork {
+        &__special::after {
+            width: 102%;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .timetowork {
+        &__title {
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            font-size: 30px;
+        }
+    }
+}

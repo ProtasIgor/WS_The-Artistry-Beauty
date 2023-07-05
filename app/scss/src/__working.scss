@@ -1,0 +1,153 @@
+.working {
+    margin-bottom: 120px;
+
+    &__content {
+        padding: 0 45px;
+    }
+
+    &__list {
+        min-height: 516px;
+        align-items: stretch;
+
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 10fr 6fr 13fr 5fr;
+        grid-template-rows: 230px 223px 214px;
+        grid-template-rows: auto;
+        grid-template-areas: "picture1 picture2 picture4 picture5"
+            "picture1 picture3 picture4 picture5"
+            "picture1 picture3 picture4 picture6";
+        gap: 20px;
+    }
+
+    &__list-item {
+        display: block;
+    }
+
+    &__list-item:nth-child(1) {
+        grid-area: picture1;
+    }
+
+    &__list-item:nth-child(2) {
+        grid-area: picture2;
+    }
+
+    &__list-item:nth-child(3) {
+        grid-area: picture3;
+    }
+
+    &__list-item:nth-child(4) {
+        grid-area: picture4;
+    }
+
+    &__list-item:nth-child(5) {
+        grid-area: picture5;
+    }
+
+    &__list-item:nth-child(6) {
+        grid-area: picture6;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__image>* {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .working {
+        margin-bottom: 100px;
+
+
+        &__list {
+            margin: 0 auto;
+            display: block;
+
+            width: 600px;
+            height: 600px;
+
+        }
+
+        &__list * {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .slick-dots {
+        margin: 30px auto;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        & button {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            color: transparent;
+            background-color: #A8AF9C;
+            opacity: .3;
+            border: none;
+            outline: none;
+        }
+
+        & button:active {
+            background-color: #A8AF9C;
+            opacity: 1;
+
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .working {
+        &__content {
+            height: 500px;
+        }
+
+        &__list {
+            width: 500px;
+            height: 500px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .working {
+
+        &__content {
+            height: 300px;
+        }
+
+        &__list {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .working {
+
+        &__content {
+            height: 200px;
+        }
+
+        &__list {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}

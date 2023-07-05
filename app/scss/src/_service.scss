@@ -1,0 +1,122 @@
+.service {
+    margin-bottom: 170px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__list-item {
+        display: block;
+        width: 100%;
+        max-width: 20%;
+    }
+
+    &__content-item {
+        margin: 0 auto;
+        max-width: 90%;
+        display: block;
+    }
+
+    &__content-item>.service__cell {
+        justify-content: space-around;
+        font-size: 1.4em;
+    }
+
+    &__content-item>.service__cell>.service__working {
+        flex-basis: 400px;
+    }
+
+    &__content-item>.service__cell>.service__price {
+        flex-basis: 100px;
+    }
+
+    &__content-item>.service__cell:first-child {
+        margin-top: 50px;
+    }
+
+    &__title-mobile {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+
+    &__cell {
+        padding: .5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Futura PT book';
+        font-size: .8em;
+        border-bottom: 1px solid #FEE0B7;
+    }
+
+    &__cell:last-child {
+        padding-bottom: 1em;
+        border-bottom: none;
+    }
+
+    &__working {
+        flex-basis: 230px;
+    }
+
+    &__price {
+        text-align: right;
+    }
+
+    &__link {
+        display: block;
+        border: 1px solid transparent;
+        text-transform: uppercase;
+        font-family: 'Futura PT book';
+        font-size: $font-size-section-title;
+        color: $color-text-main;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__link:hover {
+        font-weight: bold;
+    }
+
+    &__link:active {
+        color: rgba($color-text-main, $alpha: .7);
+    }
+}
+
+@media (min-width: 600px) {
+    .service {
+        &__inner-mobile {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .service {
+        &__link {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .service {
+        &__link {
+            font-size: 26px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .service {
+        margin-bottom: 50px;
+
+        &__inner {
+            display: none;
+        }
+    }
+}
