@@ -1,4 +1,16 @@
 {
+  "name": "theartistrybeauty",
+  "description": "This website create by Gulp build.",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "gulp test"
+  },
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
