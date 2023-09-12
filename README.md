@@ -4,7 +4,7 @@
 
 ## Open in browser
 
-[The Artistry (2023)](https://protasigor.github.io/The-Artistry-Beauty/)
+[The Artistry (2023)](https://protasigor.github.io/WS_The-Artistry-Beauty/)
 
 ## Layout
 
