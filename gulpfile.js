@@ -98,7 +98,7 @@ function Watching() {
 function BrowserSync() {
     browserSync.init({
         server: {
-            baseDir: 'app'
+            baseDir: 'docs'
         }
     });
 }
@@ -113,10 +113,8 @@ function Build() {
         'app/css/style.min.css',
         'app/js/main.min.js',
         'app/images/*',
-        'app/images/src/*.svg',
+        'app/images/src/*',
         '!app/images/info-svg',
-        '!app/images/*.svg',
-        'app/images/sprite.svg',
         'app/fonts/*',
         'app/favicons/*',
         'app/*.html'
